@@ -1,0 +1,28 @@
+:root {
+  --bg-main: #f7f2ed;
+  --bg-card: #ffffff;
+  --text-main: #000000;
+  --text-secondary: #6b6b6b;
+  --table-hover: #fbf8f8;
+  --text-opacity: rgb(105 104 104);
+  --btn-hover: rgb(87, 85, 85);
+  --sidebar-bg: #1e1d1c;
+  --sidebar-hover: rgb(39 124 120);
+  --btn-bg: #1c1b1a;
+  --btn-text: #ffffff;
+  --btn-disabled-text: #c4c4c4;
+  --border-Bottom: #eae6e6;
+  --errorMessage: #ff0000;
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: var(--btn-bg) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--btn-bg) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  box-shadow: 0 0 0 2px var(--btn-bg) !important;
+}

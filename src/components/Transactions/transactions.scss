@@ -1,0 +1,270 @@
+h2 {
+  font-weight: bold;
+}
+
+.above {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  .aboveBtn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  @media (max-width: 576px) {
+    .aboveBtn {
+      font-size: 0.6rem;
+      font-weight: bold;
+      padding: 0.1rem 0.4rem;
+      margin-left: 1rem;
+    }
+  }
+}
+.bottom {
+  background-color: var(--bg-card);
+  width: 60rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+  overflow-x: auto;
+
+  .bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    .MuiTextField-root,
+    .filter-control,
+    .sort-control {
+      width: 100%;
+    }
+    .MuiTextField-root {
+      width: 100%;
+    }
+
+    .filter-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 12rem;
+    }
+    .filter-control {
+      .MuiOutlinedInput-root {
+        fieldset {
+          border: none;
+        }
+      }
+
+      .MuiInputBase-root {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    }
+
+    .sort-label,
+    .filter-label {
+      margin-right: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+    }
+
+    .MuiSelect-select {
+      text-align: left !important;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 0.9rem;
+    }
+
+    .MuiMenuItem-root {
+      text-align: left !important;
+      justify-content: flex-start !important;
+    }
+
+    .MuiOutlinedInput-root {
+      border-radius: 0.5rem;
+
+      &.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: var(--btn-bg) !important;
+        box-shadow: none !important;
+      }
+
+      fieldset {
+        border-color: var(--btn-disabled-text);
+      }
+    }
+  }
+
+  .tableItems {
+    width: 100%;
+    min-height: 400;
+    margin-top: 3rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    th {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-Bottom);
+      padding: 0.75rem 1rem;
+      text-align: center;
+      vertical-align: middle;
+      height: 3rem;
+      white-space: nowrap;
+    }
+    tr {
+      height: 2rem;
+    }
+    tr:hover {
+      background-color: var(--table-hover);
+    }
+    td {
+      color: var(--text-secondary);
+      font-weight: 400;
+      font-size: 0.8rem;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      vertical-align: middle;
+      height: 3rem;
+      white-space: nowrap;
+    }
+    #amountTd {
+      color: var(--sidebar-hover);
+      font-weight: 700;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .preBtn,
+    .nextBtn {
+      border: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .bottom {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+
+    .bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.4rem;
+      align-items: center;
+      justify-content: center;
+
+      .filter-control,
+      .sort-control,
+      .MuiTextField-root {
+        min-width: auto;
+        font-size: 0.7rem;
+      }
+      .sort-label,
+      .filter-label {
+        display: none;
+      }
+    }
+
+    .tableItems {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+
+      table {
+        width: 100%;
+        min-width: 400px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
+      }
+
+      th {
+        white-space: nowrap;
+      }
+    }
+
+    .pagination {
+      font-size: 0.6rem;
+    }
+  }
+}
+/* for Most Screens*/
+@media (max-width: 768px) {
+  .bottom {
+    padding: 1rem;
+
+    .bar {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .tableItems table {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+/* Tablets portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bottom {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: hidden;
+
+    .bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      align-items: center;
+      justify-items: center;
+
+      .filter-control,
+      .sort-control,
+      .MuiTextField-root {
+        min-width: 0;
+        font-size: 0.7rem;
+      }
+    }
+
+    .tableItems {
+      width: 100%;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto;
+      }
+
+      th,
+      td {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
+        white-space: nowrap;
+      }
+    }
+
+    .pagination {
+      font-size: 0.6rem;
+    }
+  }
+}

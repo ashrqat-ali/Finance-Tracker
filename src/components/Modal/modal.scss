@@ -1,0 +1,73 @@
+span {
+  color: var(--text-opacity);
+}
+
+TextField {
+  border-color: var(--btn-bg) !important;
+  box-shadow: none;
+  outline: 1px solid var(--btn-bg);
+}
+
+body {
+  .search {
+    width: 100%;
+
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+  }
+  .date {
+    width: 100%;
+
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .search {
+    margin-top: 0.5rem !important;
+  }
+
+  .category {
+    margin-bottom: 2rem;
+  }
+}
+
+// date
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: var(--btn-bg) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  box-shadow: 0 0 0 2px var(--btn-bg) !important;
+}
+
+//   for select
+.react-select__control {
+  box-shadow: none;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem !important;
+
+  &:hover {
+    border-color: var(--btn-bg);
+  }
+
+  &--is-focused {
+    border-color: var(--btn-bg) !important;
+    box-shadow: 0 0 0 1px var(--btn-bg) !important;
+  }
+}
+
+.subBtn {
+  width: 100%;
+  background-color: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
+  border: none !important;
+}
+
+.MuiInput-underline:after {
+  border-bottom-color: var(--btn-bg) !important;
+}
+
+.MuiInput-underline:before {
+  border-bottom-color: var(--text-secondary) !important;
+}

@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  .above {
+    h2 {
+      margin-top: 0.2rem;
+    }
+    .logOut {
+      display: flex;
+      background-color: var(--btn-bg);
+
+      padding: 0rem 0.5rem;
+      border-radius: 0.5rem;
+      .logOutLogo,
+      p {
+        color: var(--bg-card) !important;
+      }
+      p {
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+    }
+    @media (max-width: 576px) {
+      .logOut {
+        font-size: 0.3rem;
+
+        padding-right: 0.4rem;
+        margin: 0;
+      }
+      .logOutLogo {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .squares {
+    display: flex;
+    justify-content: space-between;
+
+    .total,
+    .topCat,
+    .numberOf {
+      background-color: var(--bg-card);
+      width: 20rem;
+      height: 7rem;
+      padding: 1rem;
+      color: var(--text-main);
+      font-weight: 700;
+      border-radius: 0.5rem;
+    }
+    p {
+      color: var(--text-main);
+    }
+    h6 {
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 576px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+
+      .total,
+      .topCat,
+      .numberOf {
+        width: 18rem;
+        height: 5rem;
+      }
+      p {
+        font-size: 0.7rem;
+      }
+      h6 {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .handleSec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .rightSecHome {
+      flex: 1 1 45%;
+      background-color: var(--bg-card);
+      padding: 1rem;
+      border-radius: 8px;
+      min-height: 0;
+      margin-top: 2rem;
+
+      .chart-container.horizontal {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      h3 {
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .leftSecHome {
+      flex: 1 1 45%;
+      padding: 20px;
+      h3 {
+        color: var(--text-main);
+        font-family: "SUSE Mono", sans-serif;
+        margin-bottom: 1rem;
+      }
+      .transactionsList {
+        background: var(--bg-card);
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+
+        .transactionItem {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0;
+          border-bottom: 1px solid var(--border-Bottom);
+
+          &:last-child {
+            border-bottom: none;
+          }
+          .transactionTitle {
+            flex: 2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .transactionDate {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            width: 8.75rem;
+            text-align: center;
+          }
+
+          .transactionCategory {
+            font-weight: 500;
+            color: var(--text-secondary);
+          }
+
+          .transactionAmount {
+            font-weight: bold;
+            color: var(--sidebar-hover);
+            text-align: right;
+            width: 8.75rem;
+          }
+        }
+      }
+    }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      h3 {
+        font-size: 1rem;
+      }
+      .leftSecHome {
+        width: 100%;
+        padding: 0rem;
+        overflow-x: visible;
+        height: auto;
+        .transactionItem {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.5rem;
+          padding: 0.3rem 0;
+          border-bottom: 1px solid var(--border-Bottom);
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+
+        .transactionTitle {
+          flex: 2;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 0.8rem;
+        }
+
+        .transactionDate,
+        .transactionAmount {
+          flex: 2;
+          font-size: 0.75rem;
+          text-align: right;
+        }
+      }
+      .rightSecHome {
+        width: 100%;
+        height: auto;
+        min-height: unset;
+        margin-top: 1rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+/* Tablets portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .above h2 {
+    font-size: 1.3rem;
+  }
+
+  .squares {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 100%;
+
+    .total,
+    .topCat,
+    .numberOf {
+      width: 14rem;
+      height: 5rem;
+
+      h6 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .handleSec {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .leftSecHome,
+    .rightSecHome {
+      width: 48%;
+      padding: 1rem;
+      min-height: 300px;
+      height: auto;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .transactionItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--border-Bottom);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .transactionTitle {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.8rem;
+      }
+
+      .transactionDate,
+      .transactionAmount {
+        flex: 3;
+        font-size: 0.75rem;
+        text-align: right;
+      }
+    }
+  }
+}
+
+/* Laptop screens */
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .above h2 {
+    font-size: 1.5rem;
+  }
+
+  .squares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+
+    .total,
+    .topCat,
+    .numberOf {
+      width: calc(33.333% - 1rem);
+      height: 6rem;
+
+      h6 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .handleSec {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .leftSecHome,
+    .rightSecHome {
+      width: calc(50% - 0.75rem);
+      padding: 1rem;
+      min-height: 350px;
+      height: auto;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    .transactionItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border-Bottom);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .transactionTitle {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.85rem;
+      }
+
+      .transactionDate,
+      .transactionAmount {
+        flex: 3;
+        font-size: 0.8rem;
+        text-align: right;
+      }
+    }
+  }
+}
