@@ -214,7 +214,10 @@ export default function Budgets({ transactions }) {
                   </p>
                   <div className="calcBar">
                     <ProgressBar
-                      completed={totals[item.name] || 0}
+                      completed={Math.min(
+                        ((totals[item.name] || 0) / item.amount) * 100,
+                        100
+                      )}
                       isLabelVisible={false}
                       bgColor={item.color}
                     />
