@@ -5,7 +5,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { FaHome, FaWallet, FaListAlt } from "react-icons/fa";
 
 export default function DashBoard() {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState("home");
   // --------handle User--------
 
   const storedUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -15,12 +15,12 @@ export default function DashBoard() {
     <div className="dashboard">
       {/* Sidebar */}
       <div className="sidebar">
-        <h2 className="logo">Finance Tracker</h2>
+        <h2 className="logo">FinanceMate </h2>
         <ul className="menu">
           <li>
             <Link to="home" onClick={() => setActive("home")}>
               <FaHome className={`icon ${active === "home" ? "active" : ""}`} />{" "}
-              <span className="home">Home</span>
+              <span className="home ">Home</span>
             </Link>
           </li>
 
