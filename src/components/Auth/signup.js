@@ -52,13 +52,13 @@ export const Signup = () => {
 
         setTimeout(() => {
           setMessage("");
-        }, 3000);
+        }, 2000);
       } else if (userExists) {
         setTimeout(() => {}, 2000);
 
         setTimeout(() => {
           setMessage("");
-        }, 3000);
+        }, 2000);
       }
     }
   };

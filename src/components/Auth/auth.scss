@@ -152,10 +152,17 @@ footer {
     .rightSide {
       width: 100%;
       padding: 1.5rem;
+      .errorMsg p {
+        font-size: 0.6rem;
+      }
 
       .rightSide form {
         width: 100%;
       }
     }
+  }
+  footer .messageCard {
+    top: -6rem;
+    right: 2rem;
   }
 }

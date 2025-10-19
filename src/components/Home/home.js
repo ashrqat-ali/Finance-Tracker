@@ -152,7 +152,7 @@ export default function Home({
           {/* -----------Right Sec--------- */}
           <div className="rightSecHome">
             <h3>Budgets</h3>
-            {topCategoryValue > 0 ? (
+            {budgets.length > 0 ? (
               <BudgetChart
                 chartData={chartData}
                 budgets={budgets}
