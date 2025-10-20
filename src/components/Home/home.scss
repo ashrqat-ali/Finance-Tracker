@@ -3,9 +3,7 @@
 }
 
 .container {
-
   .above {
- 
     .logOut {
       display: flex;
       background-color: var(--btn-bg);
@@ -27,6 +25,9 @@
 
         padding-right: 0.4rem;
         margin: 0;
+        p {
+          display: none;
+        }
       }
       .logOutLogo {
         font-size: 1rem;
