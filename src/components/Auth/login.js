@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./auth.scss";
-import loginImg from "../../assets/SLImg.jpeg";
+import loginImg from "../../assets/tracker.jpg";
 
 export const Login = ({ setCurrentUser, setTransactions }) => {
   const navigate = useNavigate();
@@ -74,6 +74,11 @@ export const Login = ({ setCurrentUser, setTransactions }) => {
       </div>
 
       <div className="rightSide">
+        <div className="formText">
+          <h2>Welcome Back</h2>
+          <p>Login to continue managing your finances.</p>
+        </div>
+
         <form onSubmit={handleLogin}>
           <input
             type="email"

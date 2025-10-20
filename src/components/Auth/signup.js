@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./auth.scss";
 import { useState } from "react";
-import signImg from "../../assets/SLImg.jpeg";
+import signImg from "../../assets/tracker.jpg";
 
 export const Signup = () => {
   const navigate = useNavigate();
@@ -92,6 +92,11 @@ export const Signup = () => {
         </div>
 
         <div className="rightSide">
+          <div className="formText">
+            <h2>Create Your Account</h2>
+            <p>Start your journey to smarter spending and savings.</p>
+          </div>
+
           <form onSubmit={handleSignup}>
             <input
               type="text"
